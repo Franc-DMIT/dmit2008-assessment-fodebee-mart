@@ -1,8 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import PageNotFound from './pages/404/PageNotFound';
+import DashboardPage from './pages/dashboard/DashboardPage';
+import LoginPage from './pages/login/LoginPage';
 
 ReactDOM.render(
   <React.StrictMode>
