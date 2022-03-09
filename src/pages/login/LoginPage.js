@@ -1,11 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components';
 
 import signInBg from '../../img/sign-in-bg.jpg';
 import LoginPageSidebar from './LoginPageSidebar';
 import LoginPageMain from './LoginPageMain';
 
-export const LoginPage = () => {
+// import { useNavigate } from 'react-router-dom';
+// import {authentication} from './../../libs/firebase/firebaseConfig'
+// import { signInWithEmailAndPassword } from '../../js/libs/firebaseConfig';
+// import { ToastContainer, toast } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
+
+function LoginPage () {
   return (
     <Containers>
       <Wrapper>

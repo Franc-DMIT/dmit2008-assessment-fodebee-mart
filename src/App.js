@@ -15,7 +15,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<DashboardPage/>} />
+        <Route path="/" element={<LoginPage/>} />
 
         {/* Page not found */}
         <Route path='*' element={<PageNotFound />} />
