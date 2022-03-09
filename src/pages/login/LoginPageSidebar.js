@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 import SidebarLogo from '../../img/Fodebee-nb1.png';
 import LoginPageInput from './LoginPageInput';
-import DashboardPage from '../dashboard/DashboardPage';
+// import DashboardPage from '../dashboard/DashboardPage';
 
 const LoginPageSidebar = () => {
 

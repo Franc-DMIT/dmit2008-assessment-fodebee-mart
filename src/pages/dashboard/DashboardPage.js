@@ -5,10 +5,10 @@ import Sidebar from '../../components/Sidebar';
 import NavigationBar from '../../components/NavigationBar';
 import Panels from '../../components/Panels';
 
-import PageNotFound from '../404/PageNotFound';
-import LoginPage from '../login/LoginPage';
+// import PageNotFound from '../404/PageNotFound';
+// import LoginPage from '../login/LoginPage';
 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.css';
 
 function DashboardPage() {
