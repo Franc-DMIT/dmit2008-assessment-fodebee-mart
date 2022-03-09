@@ -17,9 +17,9 @@ const firebaseConfig = {
  
 
 // Initialize Firebase Services
-const app = initializeApp(firebaseConfig)
-const db = getDatabase(app)
-const storage = getStorage(app)
+const app = initializeApp(firebaseConfig);
+const db = getDatabase(app);
+const storage = getStorage(app);
 // const auth = getAuth(app)
 
 // export the service objects
