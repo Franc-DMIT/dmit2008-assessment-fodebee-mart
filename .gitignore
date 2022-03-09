@@ -16,8 +16,8 @@
 .env-local
 .env-template
 
-# firebase config file
-/src/js/libs/firebaseConfig.js
+# # firebase config file
+# /src/js/libs/firebaseConfig.js
 
 # misc
 .DS_Store

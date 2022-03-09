@@ -2,7 +2,7 @@
 import { initializeApp } from "firebase/app";
 import {getDatabase} from "firebase/database";
 import {getStorage} from "firebase/storage";
-import {getAuth} from "firebase/auth";
+// import {getAuth} from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -11,8 +11,8 @@ const firebaseConfig = {
   databaseURL: process.env.STOREFRONT_FIREBASE_DATABASE_URL,
   projectId: process.env.STOREFRONT_FIREBASE_PROJECT_ID, 
   storageBucket:process.env.STOREFRONT_FIREBASE_STORAGE_BUCKET,  
-  messagingSenderId:  process.env.STOREFRONT_FIREBASE_MESSAGING_SENDER_ID,
-  appId:  process.env.STOREFRONT_FIREBASE_APP_ID,
+  messagingSenderId: process.env.STOREFRONT_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.STOREFRONT_FIREBASE_APP_ID
 };
  
 
@@ -20,7 +20,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig)
 const db = getDatabase(app)
 const storage = getStorage(app)
-const auth = getAuth(app)
+// const auth = getAuth(app)
 
 // export the service objects
-export {db, storage, auth}
+export {db, storage}
