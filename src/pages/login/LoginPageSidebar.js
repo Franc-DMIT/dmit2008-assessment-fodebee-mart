@@ -27,9 +27,9 @@ const loggedIn = () => {
             <LoginPageInput placeholder="Password" type="password" />
             <button onClick={loggedIn}>Sign In</button>
             <div>
-                <a href='#'>Forgot Password?</a>
+                <a href='/login'>Forgot Password?</a>
                 <br />
-                <a href='#'>Not a member yet?</a>
+                <a href='/login'>Not a member yet?</a>
             </div>
         </Form>
     </Containers>
