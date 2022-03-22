@@ -2,7 +2,7 @@ import './App.css';
 
 import Sidebar from "./components/Sidebar";
 import NavigationBar from './components/NavigationBar';
-import Panels from './components/Panels';
+import Panels from './components/panels/Panels';
 
 import DashboardPage from './pages/dashboard/DashboardPage';
 import PageNotFound from './pages/404/PageNotFound';

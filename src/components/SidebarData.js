@@ -21,19 +21,19 @@ export const SidebarData = [
     },
 
     {
-        title: "Sellers",
+        title: "View All Products",
         icon: <StorefrontIcon />,
         link: "/sellers"
     },
 
     {
-        title: "Users",
+        title: "Add Products",
         icon: <PersonOutlineIcon />,
         link: "/users"
     },
 
     {
-        title: "Categories",
+        title: "Edit Products",
         icon: <CategoryIcon />,
         link: "/categories"
     },

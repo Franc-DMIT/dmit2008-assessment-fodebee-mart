@@ -1,7 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 
+
 const LoginPageInput = ({ type, placeholder }) => {
+
   return (
     <Containers>
         <StyledInput placeholder={placeholder && placeholder} type={type ? type : "text"} required autoComplete='off' />

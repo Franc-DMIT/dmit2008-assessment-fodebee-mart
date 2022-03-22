@@ -1,18 +1,64 @@
-import React from 'react'
+import React, {useState} from 'react'
 import styled from 'styled-components';
 
 import { useNavigate } from 'react-router-dom';
 
 import SidebarLogo from '../../img/Fodebee-nb1.png';
 import LoginPageInput from './LoginPageInput';
+
+import {MdError} from 'react-icons/md'
+
+import { Label, Input } from "./../../ui/forms";
+import { SubmitButton } from "../../ui/buttons";
+
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import { auth } from 'js/libs/firebase/firebaseConfig';
+
+import {ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 // import DashboardPage from '../dashboard/DashboardPage';
 
 const LoginPageSidebar = () => {
 
 let navigate = useNavigate();
 const loggedIn = () => {
-    let path = '/dashboard';
+    let path = '/';
     navigate(path);
+}
+
+const navigator = useNavigate();
+const [email, setEmail] = useState('');
+const [password, setPassword] = useState('')
+
+const notify = (error) => toast.error(error.code,{
+    position: "top-center",
+    autoClose: 3000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    icon:<MdError/>
+});
+
+function onHandleSignIn (e) {
+
+    e.preventDefault();
+
+    signInWithEmailAndPassword(auth, email, password)
+    .then(userCredential => {
+        // Move to dashboard page
+        console.log(userCredential)
+        navigator('/dashboard')
+    })
+    .catch(error => {
+        notify(error)
+    })
+
+    console.log(email)
+    console.log(password)
+    // Authenticate OR Error
 }
 
   return (
@@ -22,8 +68,37 @@ const loggedIn = () => {
             <h3>Fodebee<br />Mart</h3>
         </LogoWrapper>
 
-        <Form>
-            <LoginPageInput placeholder="Username" type="text" />
+        <ToastContainer />
+
+        <h3>Login to Fodebee</h3>
+
+        <form onSubmit={onHandleSignIn}>
+            <Label htmlFor="email">Email</Label>
+            <Input id="email" type="text" placeholder="Enter your email" onChange={(e)=> setEmail(e.target.value)}/>
+
+            <Label htmlFor="password">Password</Label>
+            <Input id="password" type="password" placeholder="Enter your password" onChange={(e)=> setPassword(e.target.value)} />
+
+            <SubmitButton
+              type="submit"
+              padding="0.88rem"
+              margin="1rem 0 0"
+              fs="1rem"
+              bg="orange">
+              Login
+            </SubmitButton>
+
+            <hr />
+
+            <div>
+                <a href='/login'>Forgot Password?</a>
+                <br />
+                <a href='/login'>Not a member yet?</a>
+            </div>
+        </form>
+
+        {/* <Form onSubmit={onHandleSignIn}>
+            <LoginPageInput placeholder="Username" type="text" onChange={(e) => setEmail(e.target.value)} />
             <LoginPageInput placeholder="Password" type="password" />
             <button onClick={loggedIn}>Sign In</button>
             <div>
@@ -31,7 +106,7 @@ const loggedIn = () => {
                 <br />
                 <a href='/login'>Not a member yet?</a>
             </div>
-        </Form>
+        </Form> */}
     </Containers>
   )
 }
@@ -107,6 +182,25 @@ const Containers = styled.div `
         &:hover {
             text-decoration: underline;
         }
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 2rem;
+    }
+    .Toastify__toast {
+        background-color: whitesmoke;
+        color:black;
+    }
+    .Toastify__progress-bar--error {
+        background-color: red;
+    }
+    .Toastify__close-button {
+        color:black;
+        opacity:1;
+    }
+    .Toastify__toast-icon {
+        fill:white;
     }
 `
 
