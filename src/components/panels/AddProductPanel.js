@@ -9,6 +9,7 @@ function AllProductsPanel({title, ...props}) {
     <PanelStyles>
       <PanelHeader>
         <h2>{title || "DISPLAY PANEL"}</h2>
+        <hr></hr>
       </PanelHeader>
 
       <PanelBody>
