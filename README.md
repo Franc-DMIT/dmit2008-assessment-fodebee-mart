@@ -1,3 +1,7 @@
 # DMIT2008 - Fodebee Mart Project
 
-## By Franc Javier
+## Author
+Franc Javier
+
+### Purpose
+This is used for educational purposes
