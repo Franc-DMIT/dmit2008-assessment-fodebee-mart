@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import "../../App";
 
-import Sidebar from '../../components/Sidebar';
+import Sidebar from '../../components/sidebar/Sidebar';
 import NavigationBar from '../../components/NavigationBar';
-import Panels from '../../components/panels/Panels';
+// import Panels from '../../components/panels/AllProductsPanel';
 
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from '../../js/libs/firebase/firebaseConfig';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Outlet } from 'react-router-dom';
 
 // import PageNotFound from '../404/PageNotFound';
 // import LoginPage from '../login/LoginPage';
@@ -42,7 +42,8 @@ function DashboardPage(props) {
           <Sidebar />
 
           <div className='content'> 
-            <Panels />
+            <Outlet />
+            {/* <Panels /> */}
           </div>
         </div>
       </div>
