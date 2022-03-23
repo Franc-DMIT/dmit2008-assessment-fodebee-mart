@@ -26,7 +26,7 @@ function PageNotFound() {
         {/* <a href='/dashboard' className='return-link'>Take me back...</a> */}
 
         {
-          isUser ? <Link to='/dashboard'>Take me back...</Link> : <Link to='/'>Take me back...</Link>
+          isUser ? <Link to='/dashboard'>Take me back...</Link> : <Link to='/login'>Take me back...</Link>
         }
     </div>
   )
