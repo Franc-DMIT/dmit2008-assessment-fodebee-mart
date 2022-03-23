@@ -1,3 +1,3 @@
-# DMIT2008 - Assessment 02
+# DMIT2008 - Fodebee Mart Project
 
 ## By Franc Javier
