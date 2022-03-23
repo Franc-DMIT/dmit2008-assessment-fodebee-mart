@@ -28,7 +28,7 @@ export const SidebarData = [
 
     {
         title: "Add Product",
-        icon: <PersonOutlineIcon />,
+        icon: <LocalAtmIcon />,
         link: "/add"
     },
 
