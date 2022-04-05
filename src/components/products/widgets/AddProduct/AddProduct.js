@@ -39,7 +39,7 @@ function AddProduct ({children, ...props})  {
     }
     
     setIsWriting(true)
-    productLoader(productData, productImage.file)
+    productLoader(productData, productImage)
     setProductImage({previewImage:ProductPreview, file:null})
   }
 
