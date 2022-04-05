@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 const PanelStyles = styled.section `
     flex: 1;
+    box-shadow: 0 0 2px 0 rgba(0,0,0,0.3) ;
     background-color: white;
     border-radius: 3px;
     margin: 1.5rem;
@@ -19,6 +20,11 @@ const PanelHeader = styled.header `
 
 const PanelBody = styled.div `
     margin: ${props => props.margin  || " 3rem"};
+    min-height: 500px;
+     display:flex;
+     justify-content: center;
+     align-items: center;
+     flex-wrap:wrap;
 `;
 
 export {PanelStyles, PanelBody, PanelHeader}

@@ -19,7 +19,7 @@ function NavigationBar() {
 
   return (
     <Navbar bg="navbarBg" variant='dark' sticky='top'>
-      <Navbar.Brand href="/dashboard" className="navbar-branding"><img src={logo} /></Navbar.Brand>
+      <Navbar.Brand href="/dashboard" className="navbar-branding"><img src={logo} alt="website logo" /></Navbar.Brand>
       <Nav className="ms-auto">
         <Nav.Link href='login' onClick={onLogoutRequest}>Sign Out</Nav.Link>
         <Nav.Link href='notification'><CircleNotificationsIcon /></Nav.Link>

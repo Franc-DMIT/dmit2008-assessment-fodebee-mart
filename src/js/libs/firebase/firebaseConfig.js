@@ -1,18 +1,18 @@
 // Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import {getAuth} from "firebase/auth"
-import { getDatabase } from "firebase/database";
+import {initializeApp} from "firebase/app";
+import {getAuth} from "firebase/auth";
+import {getDatabase} from "firebase/database";
 import {getStorage} from "firebase/storage";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey:"AIzaSyDheFW8oELu17C76br4ZmMhBbca_04TyDA",
-  authDomain: process.env.STOREFRONT_FIREBASE_AUTH_DOMAIN,
-  databaseURL: process.env.STOREFRONT_FIREBASE_DATABASE_URL,
-  projectId: "fodebee", 
-  storageBucket:process.env.STOREFRONT_FIREBASE_STORAGE_BUCKET,  
-  messagingSenderId: process.env.STOREFRONT_FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.STOREFRONT_FIREBASE_APP_ID
+  apiKey: "AIzaSyDheFW8oELu17C76br4ZmMhBbca_04TyDA",
+  authDomain: "fodebee.firebaseapp.com",
+  databaseURL: "https://fodebee-default-rtdb.firebaseio.com",
+  projectId: "fodebee",
+  storageBucket: "fodebee.appspot.com",
+  messagingSenderId: "743216715652",
+  appId: "1:743216715652:web:edcd48c5f9b6947ff5efd1"
 };
  
 // Initialize Firebase Services
@@ -22,4 +22,24 @@ const db = getDatabase(app);
 const storage = getStorage(app);
 
 // export the service objects
-export {storage, db, auth}
+export {auth, storage, db}
+
+
+// // Import the functions you need from the SDKs you need
+// import { initializeApp } from "firebase/app";
+// // TODO: Add SDKs for Firebase products that you want to use
+// // https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// const firebaseConfig = {
+//   apiKey: "AIzaSyDheFW8oELu17C76br4ZmMhBbca_04TyDA",
+//   authDomain: "fodebee.firebaseapp.com",
+//   databaseURL: "https://fodebee-default-rtdb.firebaseio.com",
+//   projectId: "fodebee",
+//   storageBucket: "fodebee.appspot.com",
+//   messagingSenderId: "743216715652",
+//   appId: "1:743216715652:web:edcd48c5f9b6947ff5efd1"
+// };
+
+// // Initialize Firebase
+// const app = initializeApp(firebaseConfig);

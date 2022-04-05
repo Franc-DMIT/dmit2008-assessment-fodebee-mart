@@ -10,7 +10,7 @@ import LoginPage from './pages/login/LoginPage';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.css';
-import AllProductsPanel from 'components/panels/AddProductPanel';
+import {AllProductsPanel} from 'components/panels';
 import { AddProductPanel } from 'components/panels';
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
 
         {/* Panels */}
         <Route path='/' element={<DashboardPage/>}>
-          <Route index element={<AllProductsPanel title="All Products"/>} />
+          <Route path='all' element={<AllProductsPanel title="All Products"/>} />
           <Route path='add' element={<AddProductPanel title="Add Product" />} />
         </Route>
 
@@ -38,7 +38,7 @@ function App() {
         {/* Sidebar */}
         <Route path="/profileSetting" element={<DashboardPage/>} />
         <Route path="/dashboard" element={<DashboardPage/>} />
-        <Route path="/view" element={<DashboardPage/>} />
+        <Route path="/all" element={<AllProductsPanel />} />
         <Route path="/add" element={<DashboardPage/>} />
         <Route path="/edit" element={<DashboardPage/>} />
         <Route path="/products" element={<DashboardPage/>} />

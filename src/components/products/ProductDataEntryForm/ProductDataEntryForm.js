@@ -5,9 +5,11 @@ import { ProductImageDropBox } from '../ProductImageDropBox';
 import {Label, Input} from 'ui/forms'
 import {TextArea} from 'ui/forms/textarea'
 
-function ProductDataEntryForm ({children, handleProductName, handleProductPrice, handleProductDescription, setProductImage, ...props})  {
+import { SubmitButton } from 'ui/buttons'
+
+function ProductDataEntryForm ({children, handleProductName, handleProductPrice, handleSubmit, handleProductDescription, setProductImage, ...props})  {
   return (
-        <ProductDataEntryFormStyles  {...props}>
+        <ProductDataEntryFormStyles  {...props} onSubmit={handleSubmit}>
            
            <ProductImage>
             <Label>Product Image</Label>
@@ -33,6 +35,11 @@ function ProductDataEntryForm ({children, handleProductName, handleProductPrice,
            <Label>Product Description</Label>
            <TextArea rows={6} onChange={(e) => handleProductDescription(e.target.value.trim())} maxLength={300} />
            </ProductDescription>
+
+
+           <div>
+             <SubmitButton width="100%" padding="0.75rem 0" margin="1.125 0 0 0" type="submit">Add Product</SubmitButton>
+           </div>
 
         </ProductDataEntryFormStyles>
   )

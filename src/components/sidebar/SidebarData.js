@@ -23,7 +23,7 @@ export const SidebarData = [
     {
         title: "All Products",
         icon: <StorefrontIcon />,
-        link: "/view"
+        link: "/all"
     },
 
     {

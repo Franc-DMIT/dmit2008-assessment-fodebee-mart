@@ -4,7 +4,7 @@ import {PanelStyles, PanelBody, PanelHeader} from './styles';
 
 import {AddProduct} from 'components/products/widgets/AddProduct'
 
-function AllProductsPanel({title, ...props}) {
+function AddProductsPanel({title, ...props}) {
   return (
     <PanelStyles>
       <PanelHeader>
@@ -19,4 +19,4 @@ function AllProductsPanel({title, ...props}) {
   )
 }
 
-export default AllProductsPanel
+export default AddProductsPanel

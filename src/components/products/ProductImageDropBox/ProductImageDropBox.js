@@ -1,14 +1,17 @@
- import React, {useCallback} from 'react'
- import {useDropzone} from 'react-dropzone'
+ import React, {useCallback} from 'react';
+ import {useDropzone} from 'react-dropzone';
  import {ProductImageDropBoxStyles} from './styles';
 
 
  function ProductImageDropBox  ({setProductImage, ...props}){
+
     const onDrop = useCallback(acceptedFiles => {
-        const path = acceptedFiles[0] ;
-         
-        setProductImage(URL.createObjectURL(path))
-      }, [])
+      
+        const path = acceptedFiles[0];
+
+        setProductImage({previewImage:URL.createObjectURL(path), path})
+      }, [setProductImage]);
+      
       const {
         getRootProps,
         getInputProps,
@@ -21,18 +24,14 @@
  
       
    function workingThing(){
-     console.log("look")
+     console.log("It works")
    }
 
      return( 
-      
         <ProductImageDropBoxStyles {...getRootProps({isFocused, isDragAccept, isDragReject})}>
           <input {...getInputProps()} onChange={workingThing} />
           <p>Product Image Upload</p>
         </ProductImageDropBoxStyles>
-       
-       
-      
      )
  }
  
