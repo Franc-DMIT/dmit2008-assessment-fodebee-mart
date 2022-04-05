@@ -28,11 +28,11 @@ function useAddNewProduct() {
                 ...productData,
                 imageUrl,
                 imageStoragePath:uploadRef.metadata.fullPath,
-                uid:newRef.key
-            }).then(() => {
+                uid:newRef.key })
+            })
+            .then(() => {
                 setLoading(false)
             })
-        })
     }
 
     return [loading, productLoader]

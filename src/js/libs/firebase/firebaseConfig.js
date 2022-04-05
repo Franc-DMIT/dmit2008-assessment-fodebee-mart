@@ -22,7 +22,7 @@ const db = getDatabase(app);
 const storage = getStorage(app);
 
 // export the service objects
-export {auth, storage, db}
+export {auth, db, storage}
 
 
 // // Import the functions you need from the SDKs you need

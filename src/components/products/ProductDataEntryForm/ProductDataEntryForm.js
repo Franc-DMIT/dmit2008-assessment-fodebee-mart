@@ -7,7 +7,7 @@ import {TextArea} from 'ui/forms/textarea'
 
 import { SubmitButton } from 'ui/buttons'
 
-function ProductDataEntryForm ({children, handleProductName, handleProductPrice, handleSubmit, handleProductDescription, setProductImage, ...props})  {
+function ProductDataEntryForm ({children, setProductImage, handleProductName, handleProductPrice, handleSubmit, handleProductDescription, ...props})  {
   return (
         <ProductDataEntryFormStyles  {...props} onSubmit={handleSubmit}>
            

@@ -7,9 +7,9 @@
 
     const onDrop = useCallback(acceptedFiles => {
       
-        const path = acceptedFiles[0];
+        const file = acceptedFiles[0];
 
-        setProductImage({previewImage:URL.createObjectURL(path), path})
+        setProductImage({previewImage:URL.createObjectURL(file), file})
       }, [setProductImage]);
       
       const {
@@ -19,12 +19,12 @@
         isFocused,
         isDragAccept,
         isDragReject,
-      } = useDropzone({ accept: 'image/jpeg,image/jpg,image/png', maxFiles:1, onDrop });
+      } = useDropzone({ accept: 'image/jpeg, image/jpg, image/png', maxFiles:1, onDrop });
 
  
       
    function workingThing(){
-     console.log("It works")
+     console.log("It just works -Todd Howard")
    }
 
      return( 

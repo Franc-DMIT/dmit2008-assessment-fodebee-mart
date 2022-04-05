@@ -1,4 +1,5 @@
-import React, {useState} from 'react';
+import React from 'react';
+import {useState} from 'react'
 
 import {AddProductStyles} from './styles'
 import {ProductEditor} from 'components/products/ProductEditor'
@@ -11,23 +12,10 @@ function AddProduct ({children, ...props})  {
   const [productName, setProductName] = useState('Product Name')
   const [productPrice, setProductPrice] = useState('123.45')
   const [productDescription, setProductDescription] = useState('Product Description')
-  const [productImage, setProductImage] = useState({previewImage:ProductPreview, path:null})
-  const [loading, productLoader] = useAddNewProduct()
+  const [productImage, setProductImage] = useState({previewImage:ProductPreview, file:null})
+  const [loading, productLoader] = useAddNewProduct();
 
   const formatter = useNumberFormat()
-
-  function handleSubmit (e) {
-    e.preventDefault();
-
-    const productData = {
-      productName,
-      productPrice,
-      productDescription
-    }
-    
-    setIsWriting(true)
-    productLoader(productData, productImage)
-  }
 
   function handleProductName(name) {
     setProductName(name)
@@ -39,6 +27,20 @@ function AddProduct ({children, ...props})  {
 
   function handleProductDescription(description) {
     setProductDescription(description)
+  }
+
+  function handleSubmit (e) {
+    e.preventDefault();
+
+    const productData = {
+      productName,
+      productPrice,
+      productDescription
+    }
+    
+    setIsWriting(true)
+    productLoader(productData, productImage.file)
+    setProductImage({previewImage:ProductPreview, file:null})
   }
 
   if (isWriting) {
